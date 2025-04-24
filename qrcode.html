@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR-CODE GENERATE</title>
     <style>
-    *{
-        margin: 0;
-        font-family: sans-serif;
-    }
+      *{
+          margin: 0;
+          font-family: sans-serif;
+      }
 
-    body {
-        padding: 40px 0px; 
-    }
+      body {
+          padding: 40px 0px;
+      }
 
-    h1 {
-        font-size: 50px;
-        margin-bottom: 40px;    
-            }
+      section {
+          max-width: 1000px; <!--макс ширина-->>
+          margin: 0 auto;
+      }
 
-    {
-            max-width: 1000px; <!--макс ширина-->>
-            margin: 0 auto;
-        }
+      h1 {
+          font-size: 50px;
+          margin-bottom: 40px;
+          }
+
         .description {
-            margin-bottom: 40px;
-        }
-        .form{
-            display:flex;
-            justify-content: space-between;
-        }
-        input [type="url"]{
-            font: size 32px;
-            width: 70%;
-        }
-        button {
-            font-size: 32px;
-            width: 20%;
-            cursor: pointer; 
-        }
-            </style>
-    </head>
-<body>
+              margin-bottom: 40px;
+          }
+          .form{
+              display:flex;
+              justify-content: space-between;
+              margin-bottom: 40px;
+          }
+          input [type="url"]{
+              font: size 32px;
+              width: 70%;
+          }
+          button {
+              font-size: 32px;
+              width: 20%;
+              cursor: pointer;
+          }
+          hr {
+              margin-bottom: 40px;
+          }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            alert('YES')
+        });
+        </script>
+  </head>
+  <body>
     <section>
-        <h1>генератор qr-кодов</h1> 
-        <p class="description"> вставьте адрес вашего сайта, нажмите &laquo;сгенерировать&raquo; после чего, выможете сохранить его нажав по&nbsp;нему правой кнопкой мыши</p>       
+      <h1>генератор qr-кодов</h1>
+      <p class="description">
+        вставьте адрес вашего сайта, нажмите &laquo;сгенерировать&raquo; после
+        чего, выможете сохранить его нажав по&nbsp;нему правой кнопкой мыши
+      </p>
     </section>
-    
+
     <section class="form">
-        <input type="url", name="url", placeholder="https://skilbox.ru">
-        <button>сгенерировать</button>
+      <input type="url" , name="url" , placeholder="https://skilbox.ru" />
+      <button>сгенерировать</button>
     </section>
     <section>
-    <hr>    
+      <hr />
     </section>
-</body>
+  </body>
 </html>
