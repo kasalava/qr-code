@@ -15,7 +15,7 @@
       }
 
       section {
-          max-width: 1000px; <!--макс ширина-->>
+          max-width: 1000px; 
           margin: 0 auto;
       }
 
@@ -45,15 +45,46 @@
               margin-bottom: 40px;
           }
 
-#qrcode {//чтоб отдельно обратиться к id стиля 
+#qrcode {
 width: 512px;
 height: 512px;
+}
+.qrcodeConteiner {
+  display: flex;
+  justify-content: center;
 }
     </style>
         <script type="text/javascript" src="jquery.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        alert("YES");
+        let qrcode = new QRCode(document.getElementById("qrcode"), {
+      width : 512,
+      height : 512
+    });
+        let makeCode = function() {		
+      let url = document.querySelector('[name="url")]');
+      
+      if (url=='') {
+        alert("Input a text");
+        url.focus();
+        return;
+      }
+      
+      qrcode.makeCode(url.value);
+    }
+    
+    makeCode();
+    
+    $("#text").
+      on("blur", function () {
+        makeCode();
+      }).
+      on("keydown", function (e) {
+        if (e.keyCode == 13) {
+          makeCode();
+        }
+      });
+
       });
     </script>
   </head>
@@ -74,8 +105,11 @@ height: 512px;
       <hr />
     </section>
 
-    <section>
+    <section class="'qrcodeConteiner">
       <div id="qrcode"></div>
+    </section>
+   <section>
+   
     </section>
   </body>
 </html>
