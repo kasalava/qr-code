@@ -72,20 +72,10 @@ height: 512px;
       
       qrcode.makeCode(url.value);
     }
-    
+    document.querySelector('button')addEventListener('click' function())
     makeCode();
-    
-    $("#text").
-      on("blur", function () {
-        makeCode();
-      }).
-      on("keydown", function (e) {
-        if (e.keyCode == 13) {
-          makeCode();
-        }
-      });
 
-      });
+  });
     </script>
   </head>
   <body>
