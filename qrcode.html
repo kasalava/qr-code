@@ -83,7 +83,10 @@
           errorMessage.classList.add('error-message-active');
           qrcodeContainer.querySelector('.img').style.display = 'none';
           qrcodeContainer.querySelector('.img').src='';
+          let canvas = qrcodeContainer.querySelector('.img').src='';
+          canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
           qrcodeContainer.querySelector('canvas').style.display='block';
+
           url.focus();
         };
 
